@@ -6,12 +6,12 @@ USER root
 
 RUN curl -sSL https://get.docker.com/ | sh
 
-ENV NPM_CONFIG_LOGLEVEL=info \
+ENV NPM_CONFIG_LOGLEVEL=http \
   NPM_CONFIG_DISTURL=http://npm.taobao.org/mirrors/node \
   NPM_CONFIG_REGISTRY=https://registry.npm.taobao.org \
   NPM_CONFIG_PROGRESS=false \
   NPM_CONFIG_COLOR=false \
-  NODE_VERSION=6.9.4
+  NODE_VERSION=7.6.0
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
